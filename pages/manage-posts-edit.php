@@ -43,9 +43,9 @@ require "parts/header.php"; ?>
             <select class="form-control" id="status" name="status">
 
               <?php if ( $post['status'] == 'pending' ) : ?>
-                <option value="review" selected>Pending for Review</option>
+                <option value="pending" selected>Pending for Review</option>
               <?php else: ?>
-                <option value="review">Pending for review</option>
+                <option value="pending">Pending for review</option>
               <?php endif; ?>
 
               <?php if ( $post['status'] == 'publish' ) : ?>

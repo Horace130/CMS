@@ -38,7 +38,15 @@ require "parts/header.php"; ?>
             <tr>
               <th scope="row"><?= $post['id']?></th>
               <td><?= $post['title']?></td>
-              <td><span class="badge bg-warning"><?= $post['status']?></span></td>
+              <td> 
+                 <?php if ( $post['status'] == 'pending' ) : ?>
+                  <span class="badge bg-warning"><?= $post['status']; ?></span>
+                <?php endif; ?>
+                
+                <?php if ( $post['status'] == 'publish' ) : ?>
+                  <span class="badge bg-success"><?= $post['status']; ?></span>
+                <?php endif; ?>
+              </td>
               <td class="text-end">
                 <div class="buttons">
                   <a
