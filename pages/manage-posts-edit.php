@@ -23,6 +23,7 @@ require "parts/header.php"; ?>
       <div class="card mb-2 p-4">
         <form method="POST" action="/post/edit">
           <div class="mb-3">
+          <?php require 'parts/error_message.php'; ?>
             <label for="post-title" class="form-label">Title</label>
             <input
               type="text"
@@ -48,9 +49,9 @@ require "parts/header.php"; ?>
               <?php endif; ?>
 
               <?php if ( $post['status'] == 'publish' ) : ?>
-                <option value="publish" selected>publish</option>
-              <?php else: ?>
-                <option value="publish">publish</option>
+                <option value="publish" selected class="bg-success-option">Publish</option>
+                <?php else: ?>
+                    <option value="publish" class="bg-success-option">Publish</option>
               <?php endif; ?>
             </select>
           </div>
